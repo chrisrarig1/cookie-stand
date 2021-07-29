@@ -43,9 +43,12 @@ let seattle = {
       li.textContent = `${this.hrs[i]} : ${this.avgsoldhrarray[i]}`;
       ul.appendChild(li);
     }
+    let totli = document.createElement('li');
+    totli.textContent = `Total: ${this.dailytotal}`;
+    ul.appendChild(totli);
   },
-
 };
+
 
 seattle.getrandos();
 seattle.sold();
@@ -95,6 +98,9 @@ let tokyo = {
       li2.textContent = `${this.hrs[i]} : ${this.avgsoldhrarray[i]}`;
       ul2.appendChild(li2);
     }
+    let totli = document.createElement('li');
+    totli.textContent = `Total: ${this.dailytotal}`;
+    ul2.appendChild(totli);
   },
 
 };
@@ -144,6 +150,9 @@ let dubai = {
       li3.textContent = `${this.hrs[i]} : ${this.avgsoldhrarray[i]}`;
       ul3.appendChild(li3);
     }
+    let totli = document.createElement('li');
+    totli.textContent = `Total: ${this.dailytotal}`;
+    ul3.appendChild(totli);
   },
 
 };
@@ -193,6 +202,9 @@ let paris = {
       li4.textContent = `${this.hrs[i]} : ${this.avgsoldhrarray[i]}`;
       ul4.appendChild(li4);
     }
+    let totli = document.createElement('li');
+    totli.textContent = `Total: ${this.dailytotal}`;
+    ul4.appendChild(totli);
   },
 
 };
@@ -242,6 +254,9 @@ let lima = {
       li5.textContent = `${this.hrs[i]} : ${this.avgsoldhrarray[i]}`;
       ul5.appendChild(li5);
     }
+    let totli = document.createElement('li');
+    totli.textContent = `Total: ${this.dailytotal}`;
+    ul5.appendChild(totli);
   },
 
 };
