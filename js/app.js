@@ -151,3 +151,101 @@ let dubai = {
 dubai.getrandos();
 dubai.sold();
 dubai.topage();
+
+///Paris
+
+let article4 = document.createElement('article');
+salesheet.appendChild(article4);
+
+let h4 = document.createElement('h3');
+h4.textContent = 'Paris';
+article4.appendChild(h4);
+
+let ul4 = document.createElement('ul');
+ul4.id = 'paris';
+article4.appendChild(ul4);
+
+let paris = {
+  city: 'Paris',
+  min: 20,
+  max: 38,
+  avg: 2.3,
+  avgsoldhrarray: [],
+  sum: 0,
+  hrs: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
+  dailytotal: 0,
+  getrandos: function() {
+    return Math.floor(Math.random() * (this.max - this.min +1) + this.min);
+  },
+  sold: function(){
+    while(this.avgsoldhrarray.length < this.hrs.length){
+      let totalsold = Math.ceil(this.avg * this.getrandos());
+      this.avgsoldhrarray.push(totalsold);
+    }
+    for( let i = 0; i < this.avgsoldhrarray.length; i++){
+      this.dailytotal += this.avgsoldhrarray[i];
+    }
+    return this.avgsoldhrarray;
+  },
+  topage: function(){
+    for (let i = 0; i < this.avgsoldhrarray.length; i++){
+      let li4 = document.createElement('li');
+      li4.textContent = `${this.hrs[i]} : ${this.avgsoldhrarray[i]}`;
+      ul4.appendChild(li4);
+    }
+  },
+
+};
+
+paris.getrandos();
+paris.sold();
+paris.topage();
+
+///Lima
+
+let article5 = document.createElement('article');
+salesheet.appendChild(article5);
+
+let h5 = document.createElement('h3');
+h5.textContent = 'Lima';
+article5.appendChild(h5);
+
+let ul5 = document.createElement('ul');
+ul5.id = 'lima';
+article5.appendChild(ul5);
+
+let lima = {
+  city: 'Lima',
+  min: 2,
+  max: 16,
+  avg: 4.6,
+  avgsoldhrarray: [],
+  sum: 0,
+  hrs: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
+  dailytotal: 0,
+  getrandos: function() {
+    return Math.floor(Math.random() * (this.max - this.min +1) + this.min);
+  },
+  sold: function(){
+    while(this.avgsoldhrarray.length < this.hrs.length){
+      let totalsold = Math.ceil(this.avg * this.getrandos());
+      this.avgsoldhrarray.push(totalsold);
+    }
+    for( let i = 0; i < this.avgsoldhrarray.length; i++){
+      this.dailytotal += this.avgsoldhrarray[i];
+    }
+    return this.avgsoldhrarray;
+  },
+  topage: function(){
+    for (let i = 0; i < this.avgsoldhrarray.length; i++){
+      let li5 = document.createElement('li');
+      li5.textContent = `${this.hrs[i]} : ${this.avgsoldhrarray[i]}`;
+      ul5.appendChild(li5);
+    }
+  },
+
+};
+
+lima.getrandos();
+lima.sold();
+lima.topage();

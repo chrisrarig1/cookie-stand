@@ -8,3 +8,26 @@ header{
     border-color: black;
     border-width: 10px;
 }
+article{
+    float: left;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    
+}
+#tags{
+    list-style-type: none;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    background-color:salmon;
+    color: white ;
+}
+h1{
+
+}
+ul{
+    list-style: square;
+    margin-left: 2rem;
+}
