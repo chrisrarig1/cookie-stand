@@ -2,9 +2,9 @@
 
 ## Cookie-Stand
 
-I build an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
+This website stores the data and information concerning Salmon Cookie shop
 
-### Author: Student/Group Name
+### Author: Chris Rarig
 
 ### Links and Resources
 * [submission PR](http://xyz.com)
