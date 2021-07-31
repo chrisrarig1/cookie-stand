@@ -1,11 +1,11 @@
 'use strict';
 
 // console.log('hello');
+const salesheet = document.getElementById ('cities');
 
 
 
-
-
+let storeArray = [];
 
 function Store (city, min, max, avg) {
   this.city = city;
@@ -14,6 +14,7 @@ function Store (city, min, max, avg) {
   this.avg = avg;
   this.avgsoldhrarray = [];
   this.sum = 0;
+  this.listId = `${this.city} sales`;
   this.hrs = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
   this.dailytotal = 0;
 
@@ -31,53 +32,88 @@ function Store (city, min, max, avg) {
     }
     return this.avgsoldhrarray;
   };
+  this.render = function(){
+    //render article
+    let article = document.createElement('article');
+    salesheet.appendChild(article);
+
+    let h = document.createElement('h3');
+    h.textContent = this.city;
+    article.appendChild(h);
+
+    let ul = document.createElement('ul');
+    ul.id = this.listId;
+    article.appendChild(ul);
+
+    //create and append to the article
+
+    //fill in the <ul> with <li>:
+
+    this.topage();
+  };
 
   this.topage = function(){
+    this.getrandos();
+    this.sold();
+    let cityList = document.getElementById(this.listId);
     for (let i = 0; i < this.avgsoldhrarray.length; i++){
       let li = document.createElement('li');
       li.textContent = `${this.hrs[i]} : ${this.avgsoldhrarray[i]}`;
-      ul.appendChild(li);
+      cityList.appendChild(li);
     }
     let totli = document.createElement('li');
     totli.textContent = `Total: ${this.dailytotal}`;
-    ul.appendChild(totli);
+    cityList.appendChild(totli);
   };
+  storeArray.push(this);
 }
 
-const salesheet = document.getElementById('cities');
-function get_table() {
-  let table = document.createElement('table');
-salesheet.appendChild(table);
-
-for (let i = 0; i < Store.hrs.length; i++){
-
-
-let tr = document.createElement('tr');
-tr.id = 'seattle';
-table.appendChild(tr);
-
+console.log(this.storeArray);
 let seattle = new Store ('Seattle',23,65,6.3);
-seattle.getrandos();
-seattle.sold();
-seattle.topage();
+seattle.render();
 console.log(seattle);
 
 let tokyo = new Store ('Tokyo', 3, 24, 1.2);
-tokyo.getrandos();
-tokyo.sold();
-tokyo.topage();
+tokyo.render();
 console.log(tokyo);
 
 let dubai = new Store ('Dubai', 11, 38, 3.7);
-dubai.getrandos();
-dubai.sold();
-dubai.topage();
+dubai.render();
 console.log(dubai);
 
 let paris = new Store ('Paris', 20, 38, 2.3);
+paris.render();
 console.log(paris);
+
 let lima = new Store ('Lima', 2, 16, 4.6);
+lima.render();
 console.log(lima);
+console.log(storeArray);
+
+const citytable = document.querySelector('table');
+
+Store.prototype.renderTable = function(){
+  let tr = document.createElement('tr');
+  citytable.appendChild(tr);
+  let tdName = document.createElement('td');
+  tdName.textContent = this.name;
+  tr.appendChild(tdName);
+  for( let i = 0; i <this.avgsoldhrarray.length; i++){
+    let td = document.createElement('td');
+    td.textContent = this.cityList[i];
+    tr.appendChild(td);
+  }
+};
+seattle.renderTable();
+
+function renderAll(){
+  for(let i =0; i < storeArray.length; i++){
+    storeArray[i].render();
+    storeArray[i].renderTable();
+  }
+
+}
+renderAll();
 
 
 
