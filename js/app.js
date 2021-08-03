@@ -128,4 +128,3 @@ function totdailysales(){
     hourlysale[i].push(storeArray[i].dailytotal);
 }
 totdailysales();
-console.log(hourlysale);
