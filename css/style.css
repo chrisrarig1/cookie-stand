@@ -43,11 +43,22 @@ ul{
     border-width: 1px;
 }
 table{
-    margin: 1rem;
+    
+    border: 1px solid black ;
 }
 td{
-    padding: 1rem;
+    padding: 5px;
+    border: 1px solid black ;
+    text-align: center;
+    
+}
+th{
+    font-weight: bold;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 thead {
     font-weight: bold;
 }
+
+
