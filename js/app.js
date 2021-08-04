@@ -99,7 +99,7 @@ let result = hourlysale.reduce(function (total, a) {
   return total;
 }, []);
 
-result.pop();
+// result.pop();
 function rendertotal (){
   for(let i = 0; i < result.length; i++){
     let totalsold = document.createElement('td');
