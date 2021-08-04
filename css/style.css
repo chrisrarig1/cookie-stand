@@ -37,6 +37,10 @@ nav ul li a:hover{
     color: darkblue;
 }
 
+body{
+    background-image: url('chinook.jpg');
+}
+
 article{
     float: left;
     margin-left: 2rem;
