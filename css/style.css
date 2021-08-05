@@ -7,8 +7,6 @@ header{
     font-size:25px;
     text-align: center;
     background-color:salmon;
-    border-color: black;
-    border-width: 10px;
     width: 100%;
 }
 
@@ -23,8 +21,7 @@ nav ul {
     display: flex;
     align-items: center;
     list-style-type: none;
-    border: black;
-    border-style:dotted;
+
 }
 
 nav ul li a{
@@ -40,24 +37,67 @@ nav ul li a:hover{
 }
 
 body{
-    background-image: url('/cookie-stand/img/chinook.jpg');
-    background-repeat:;
+    background-image: url('/cookie-stand/img/fish.jpg');
 }
 
-article{
-    float: left;
-    margin-left: 2rem;
-    margin-top: 2rem;
+main{
+    margin: 30px auto;
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-h3{
-    font-family: 'Monoton', cursive;
-    padding: 3;
-    font-size: 35px;
-    font-style: italic;
-     ;
-
+.article1 {
+    
+    background-color: whitesmoke;
+    width: 450px;
+    font-size: 20px;
+    border:salmon;
+    border-style:groove;
+    border-block-width: 10px;
 }
+
+img {
+    width: 450px;
+}
+
+.article2 {
+    
+    background-color: whitesmoke;
+    width: 450px;
+    margin-top: 1rem;
+    font-size: 20px;
+    border:salmon;
+    border-style:groove;
+    border-block-width: 10px;
+    
+    
+}
+
+.article3 {
+    
+    background-color: whitesmoke;
+    width: 960px;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    border:salmon;
+    border-style:groove;
+    border-block-width: 10px; 
+}
+
+#salmon{
+    width: auto;
+    height: 50px;
+}
+
+#cookie{
+    margin-top: 1rem;
+    width: 450px;
+    
+}
+
 
 h1{
     font-family: 'Monoton', cursive;
@@ -65,7 +105,86 @@ h1{
     text-align: center;
     background-color: salmon;
     margin-top: auto;
+    border:white;
+    border-style:groove;
+    border-block-width: 10px;
 }
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3;
+    font-size: 35px;
+    font-style: italic;
+    text-align: center;
+    margin: 1rem;
+    text-decoration: salmon wavy underline;
+    text-decoration-style: wavy;
+}
+
+#hours{
+    float: right;
+    margin-top: -11rem;
+    margin-left: -10rem;
+    margin-right: 8rem;;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+
+h4{
+   font-size: 20px;
+   display: block;
+   padding-bottom:  0.75rem;
+   padding-top: 00.75rem;
+   
+}
+
+.gift{
+    border-style: groove;
+    border-color: salmon;
+    background-color: whitesmoke;
+    text-align: center;
+    width: 960px;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    border-block-width: 10px;
+}
+
+
+
+.cutter{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 300px;
+    padding-top: 2rem;
+    
+    
+}
+
+footer{width: 100%;
+    background-color: salmon;
+
+}
+
+footer h3{
+    font-family: 'Monoton', cursive;
+    font-size: 35px;
+    text-align: center;
+    background-color: salmon;
+    margin-top: auto;
+    padding-top: 1rem;
+    text-decoration: none;
+}
+footer ul{
+    text-align: center;
+    padding-bottom: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 
 table{
     
