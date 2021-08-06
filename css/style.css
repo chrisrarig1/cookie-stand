@@ -125,10 +125,10 @@ h3{
 }
 
 #hours{
-    float: right;
-    margin-top: -11rem;
+    float: right; 
+    margin-top: -14rem;
     margin-left: -10rem;
-    margin-right: 8rem;;
+    margin-right: 8rem;
     text-align: center;
     text-decoration: none;
     
@@ -138,12 +138,12 @@ h3{
 h4{
    font-size: 30px;
    font-family: 'Teko', sans-serif;
-   display: block;
    padding-bottom:  0.75rem;
-   padding-top: 00.75rem;
+   padding-top: 0.75rem;
    color:cornflowerblue;
-   
+   position: relative;
 }
+
 
 .gift{
     border-style: groove;
@@ -159,14 +159,19 @@ h4{
 
 
 
-.cutter{
+div{
     display: flex;
-    justify-content: space-between;
-    width: 300px;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    
+}
+.cutter{
+    width: 320px;
     height: 300px;
-    padding-top: 2rem;
-    
-    
+    padding-top: 1rem;
+    padding: 1rem
+
 }
 
 footer{width: 100%;
