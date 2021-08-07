@@ -22,10 +22,12 @@ function Store (city, min, max, avg) {
       let totalsold = Math.ceil(this.avg * this.getrandos());
       this.avgsoldhrarray.push(totalsold);
     }
+
     for( let i = 0; i < this.avgsoldhrarray.length; i++){
       this.dailytotal += this.avgsoldhrarray[i];
     }
     return this.dailytotal;
+
   };
   this.render = function(){
     this.getrandos();
@@ -37,7 +39,6 @@ function Store (city, min, max, avg) {
 
 
 let seattle = new Store ('Seattle',23,65,6.3);
-seattle.render();
 
 let tokyo = new Store ('Tokyo', 3, 24, 1.2);
 
@@ -46,9 +47,6 @@ let dubai = new Store ('Dubai', 11, 38, 3.7);
 let paris = new Store ('Paris', 20, 38, 2.3);
 
 let lima = new Store ('Lima', 2, 16, 4.6);
-
-console.log(storeArray);
-console.log(hourlysale);
 
 
 const citytable = document.querySelector('tbody');
@@ -75,9 +73,6 @@ Store.prototype.renderTable = function(){
   }
 };
 
-let thtot = document.createElement('th');
-thtot.textContent = 'Totals';
-citytot.appendChild(thtot);
 
 let thtime = document.createElement('th');
 thtime.textContent = 'Time';
@@ -92,20 +87,33 @@ function renderAll(){
 }
 renderAll();
 
-let result = hourlysale.reduce(function (total, a) {
-  a.forEach(function (next, i) {
-    total[i] = (total[i] || 0) + next;
-  });
-  return total;
-}, []);
 
+
+console.log(hourlysale);
 // result.pop();
 function rendertotal (){
+  let saltot = document.createElement('tr');
+  saltot.id = 'saltotid';
+  citytot.appendChild(saltot);
+
+  let thtot = document.createElement('th');
+  thtot.textContent = 'Totals';
+  saltot.appendChild(thtot);
+
+  let result = hourlysale.reduce(function (total, a) {
+    a.forEach(function (next, i) {
+      total[i] = (total[i] || 0) + next;
+    });
+    return total;
+  }, []);
+
   for(let i = 0; i < result.length; i++){
     let totalsold = document.createElement('td');
+    totalsold.id = 'totalsoldid';
     totalsold.textContent = result[i];
-    citytot.appendChild(totalsold);
+    saltot.appendChild(totalsold);
   }
+  console.log(result);
 }
 
 function rendertime() {
@@ -131,8 +139,13 @@ totdailysales();
 
 //Form
 // city, min, max, avg
+//totalSalesid
 
 let storeForm = document.getElementById('form');
+
+function deletrow(){
+  document.getElementById('saltotid').remove();
+}
 
 function storeSubmit(event){
   event.preventDefault();
@@ -143,8 +156,13 @@ function storeSubmit(event){
   let avgSold = +event.target.avgcook.value;
   console.log(storeCity, minCust,maxCust,avgSold);
   let newstore = new Store(storeCity,minCust,maxCust,avgSold);
+  deletrow();
   newstore.render();
   newstore.renderTable();
+  rendertotal();
+  totdailysales();
+  document.getElementById('saltotid').deleteCell(-1);
+  console.log(storeArray);
 }
 
 storeForm.addEventListener('submit', storeSubmit);
