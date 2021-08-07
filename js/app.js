@@ -129,6 +129,24 @@ function totdailysales(){
 }
 totdailysales();
 
+//Form
+// city, min, max, avg
 
+let storeForm = document.getElementById('form');
+
+function storeSubmit(event){
+  event.preventDefault();
+  console.log(event.target.storecity.value);
+  let storeCity = event.target.storecity.value;
+  let minCust = +event.target.mincust.value;
+  let maxCust = +event.target.maxcust.value;
+  let avgSold = +event.target.avgcook.value;
+  console.log(storeCity, minCust,maxCust,avgSold);
+  let newstore = new Store(storeCity,minCust,maxCust,avgSold);
+  newstore.render();
+  newstore.renderTable();
+}
+
+storeForm.addEventListener('submit', storeSubmit);
 
 

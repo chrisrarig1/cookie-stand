@@ -21,6 +21,28 @@
             </header>
 
             <main>
+                <form id='form'>
+                    <!-- // city, min, max, avg -->
+                <fieldset>
+                    <legend>Store Info</legend>
+                    <label for='storeCity'>Store City
+                    <input type="text" id="storeCity" placeholder="Store City" name='storecity' required>
+                    </label>
+                    <label>Min Customers
+                    <input type="number" name="mincust"  required>
+                    </label>
+                    <label>Max Customers
+                        <input type="number" name="maxcust" required>
+                    </label>
+                    <label>Avg Cookies Bought
+                        <input type="number" name="avgcook" step="any" required>
+                    </label>
+                </fieldset>
+                <button type="submit">
+                    Upload
+                </button>
+    
+                </form>
             <table>
                 <thead>
             
