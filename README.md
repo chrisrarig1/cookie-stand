@@ -8,8 +8,9 @@ This website stores the data and information concerning Salmon Cookie shop
 
 ### Links and Resources
 * [submission PR](http://xyz.com)
-* Any Links you used as reference
 
 ### Reflections and Comments
-* Consider including the answers to your daily journal and submission questions here
-* This is also a good place to reflect on the tools and resources used and learned
+
+* This was a difficult assignment that ended up being very gratifying.
+I really struggled on certain CSS formatting areas.
+* I am proud of the finished product it obviously isn't perfect, but it is definitely something I am proud of.
