@@ -7,7 +7,8 @@ This website stores the data and information concerning Salmon Cookie shop
 ### Author: Chris Rarig
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
+
+* [Salmon Cookies](https://chrisrarig1.github.io/cookie-stand/sales.html)
 
 ### Reflections and Comments
 
