@@ -1,5 +1,5 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     box-sizing: border-box;
 }
 
@@ -28,7 +28,7 @@ nav ul li a{
     padding: 2rem;
     color: cornsilk;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
 }
 

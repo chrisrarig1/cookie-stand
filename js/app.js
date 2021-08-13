@@ -89,8 +89,7 @@ renderAll();
 
 
 
-console.log(hourlysale);
-// result.pop();
+
 function rendertotal (){
   let saltot = document.createElement('tr');
   saltot.id = 'saltotid';
@@ -113,7 +112,7 @@ function rendertotal (){
     totalsold.textContent = result[i];
     saltot.appendChild(totalsold);
   }
-  console.log(result);
+
 }
 
 function rendertime() {
@@ -137,9 +136,6 @@ function totdailysales(){
 }
 totdailysales();
 
-//Form
-// city, min, max, avg
-//totalSalesid
 
 let storeForm = document.getElementById('form');
 
@@ -166,5 +162,7 @@ function storeSubmit(event){
 }
 
 storeForm.addEventListener('submit', storeSubmit);
+
+
 
 
